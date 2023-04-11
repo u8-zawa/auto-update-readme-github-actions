@@ -1,3 +1,3 @@
 # auto-update-readme-github-actions
 
-- Version: 
+- Version: ${VERSION}
