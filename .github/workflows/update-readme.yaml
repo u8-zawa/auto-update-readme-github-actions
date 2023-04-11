@@ -2,8 +2,8 @@ name: Update README
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - config.json
 
 jobs:
   update-readme:
