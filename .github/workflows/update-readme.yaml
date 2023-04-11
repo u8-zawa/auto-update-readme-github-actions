@@ -18,7 +18,7 @@ jobs:
         
     - name: Fetch config.json
       run: |
-        curl -O https:// > config.json
+        curl -O https://raw.githubusercontent.com/u8-zawa/auto-update-readme-github-actions/main/config.json > config.json
         cat config.json
         echo "VERSION=$(jq -r .version config.json)" >> $GITHUB_ENV
     
