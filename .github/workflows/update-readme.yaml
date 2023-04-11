@@ -1,0 +1,32 @@
+name: Update README
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        
+    - name: Fetch config.json
+      run: |
+        curl -O https:// > config.json
+        cat config.json
+        echo "VERSION=$(jq -r .version config.json)" >> $GITHUB_ENV
+    
+    - name: Run update_readme.py
+      run: python update_readme.py
+
+    - name: Auto Commit
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Update README
+        file_pattern: 'README.md'
