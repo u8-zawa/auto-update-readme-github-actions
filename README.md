@@ -1,3 +1,5 @@
 # auto-update-readme-github-actions
 
-- Version: 1.0.1
+## config.json
+
+- Version: 1.0.2
