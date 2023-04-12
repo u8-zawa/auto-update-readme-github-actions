@@ -5,6 +5,7 @@ on:
     paths:
       - config.json
       - README_template.md
+  workflow_dispatch:
 
 jobs:
   update-readme:
