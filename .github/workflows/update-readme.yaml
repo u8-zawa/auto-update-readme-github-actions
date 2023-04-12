@@ -23,6 +23,9 @@ jobs:
         cat config.json
         echo "VERSION=$(jq -r .version config.json)" >> $GITHUB_ENV
     
+    - name: List Ubuntu Environment Variables
+      run: env
+    
     - name: Run update_readme.py
       run: python update_readme.py
 
