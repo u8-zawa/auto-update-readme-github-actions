@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - config.json
+      - README_template.md
 
 jobs:
   update-readme:
