@@ -22,7 +22,7 @@ jobs:
       run: |
         curl -O https://raw.githubusercontent.com/u8-zawa/auto-update-readme-github-actions/main/config.json > config.json
         echo "VERSION=$(jq -r .version config.json)" >> $GITHUB_ENV
-        echo ${{ env.VERSION }}
+        echo "${{ env.VERSION }}"
     
     - name: Run update_readme.py
       run: python update_readme.py
